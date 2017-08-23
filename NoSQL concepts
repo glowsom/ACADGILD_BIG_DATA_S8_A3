@@ -1,0 +1,30 @@
+1. NoSQL database is a database management system that can support structured, semi-structured and unstructured data, while
+providing horizontal scalability performance and high availability. It provides faster data ingestion.
+Example: in terms of unstructured data, there is no need to define schema, which means any data (web pages, audio and video,
+metadata etc) can be stored and analyzed.
+
+
+2. NoSql Database differ in how they store data.
+a. Column Based databases have storage blocks that each contain data belonging to only one column; examples include: HBase and
+Cassandra.
+b. Document Based databases store documents made up of tagged elements; examples include MongoDB and CouchDB.
+c. A Graph-based database is a network database that uses edges and nodes to represent and store its data; and example is Neo4J.
+d. Key-Value Databases use a big hash table of key value pairs; examples include Dynamo and Riak.
+
+
+3. CAP Theorem has the notion that any database may have only up to 2 of these 3 features: Consistency, Availability and Partition tolerance.
+Examples:
+RDBMSs offer only Availability and Consistency.
+Dynamo & HBase offer Consistency and Partition Tolerance.
+CouchDB and Riak offer Availability and Partition Tolerance.
+
+4. HBase has a Master-Slave setup. The Master servers consist of NameNode, ZooKeeper and HMaster, and the Slave servers consist
+of Region Servers and DataNodes.
+
+5. Here are some differences between HBase and RDBMS
+HBase stores data in a column oriented fashion, while RDBMS stores data in rows.
+HBase is optimized for aggregation tasks because it’s column oriented and the columns of each column family share some values,
+while RDBMS is optimized for single row reads and writes.
+HBase applies compression techniques on the data which makes it prefered for larger rows and columns, where as RDBMS is more
+suited for relatively less rows and columns.
+HBase doesn’t require schema while RDBMS does.
